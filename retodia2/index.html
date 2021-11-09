@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripticon" content="Simulador de hipotecas" />
+    <meta name="author" content="Oscar Corral garcia"/>
+    <title>Simulador de hipotecas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Simulador de hipotecas</h1>
+    </header>
+    <main>
+        <div id="form_calculator" class="form">
+            <form id="credits" action="some-url" method="post">
+
+                <label for="amount">Cantidad (€)</label>
+                <input type="number" name="amount" id="amount" value="1"></form><br>
+
+                <label for="monthly_fees">Meses (Entre 3 y 60)</label>
+                <input type="range" name="monthly_fees" id="monthly_fees" class="slider" min="3" max="60" value="3">
+                <span id="monthly_range"></span>
+                <br>
+                <label for="interests">Intereses </label>
+                <input type="range" name="interests" id="interests" min="1" max="8" value="1">
+                <span id="interests_range"></span>
+                <br>
+                <input type="submit" value="Calcular">
+                <input type="reset">
+            </form>
+        </div>
+        <div id="result">
+            <h3>Tu hipoteca : </h3>
+            <p>Capital total: <span id="capital_total"></span></p>
+            <p>tipo de interes: <span id="interest_type"></span></p>
+            <p>Total de cuotas: <span id="monthlyj_dues"></span></p>
+            <p>Cuota mensual: <span id="dues"></span></p>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>
